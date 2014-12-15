@@ -78,7 +78,10 @@ namespace CC.Common.Data.Util.Demo
       string className = cboClasses.SelectedItem.ToString();
       ClassDialectInterface classDialect = DialectLoader.GetClassDialect(className);
 
-      ClassBuilder builder = new ClassBuilder("MyTable", _fields, classDialect);
+      Dictionary<string, string> names = new Dictionary<string, string>();
+      names.Add("MyField", "MyNewField");
+
+      ClassBuilder builder = new ClassBuilder("MyTable", _fields, classDialect, names);
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
     }
