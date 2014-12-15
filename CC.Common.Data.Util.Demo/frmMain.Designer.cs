@@ -34,6 +34,8 @@ partial class frmMain
       this.lstFields = new System.Windows.Forms.ListBox();
       this.txtOutput = new System.Windows.Forms.TextBox();
       this.btnGenClass = new System.Windows.Forms.Button();
+      this.cboClasses = new System.Windows.Forms.ComboBox();
+      this.cboTables = new System.Windows.Forms.ComboBox();
       ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
       this.splitMain.Panel1.SuspendLayout();
       this.splitMain.Panel2.SuspendLayout();
@@ -66,7 +68,7 @@ partial class frmMain
       this.splitMain.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-      this.splitMain.Location = new System.Drawing.Point(12, 41);
+      this.splitMain.Location = new System.Drawing.Point(12, 70);
       this.splitMain.Name = "splitMain";
       this.splitMain.Orientation = System.Windows.Forms.Orientation.Horizontal;
       // 
@@ -77,8 +79,8 @@ partial class frmMain
       // splitMain.Panel2
       // 
       this.splitMain.Panel2.Controls.Add(this.txtOutput);
-      this.splitMain.Size = new System.Drawing.Size(558, 337);
-      this.splitMain.SplitterDistance = 168;
+      this.splitMain.Size = new System.Drawing.Size(558, 308);
+      this.splitMain.SplitterDistance = 153;
       this.splitMain.TabIndex = 4;
       // 
       // lstFields
@@ -87,7 +89,7 @@ partial class frmMain
       this.lstFields.FormattingEnabled = true;
       this.lstFields.Location = new System.Drawing.Point(0, 0);
       this.lstFields.Name = "lstFields";
-      this.lstFields.Size = new System.Drawing.Size(558, 168);
+      this.lstFields.Size = new System.Drawing.Size(558, 153);
       this.lstFields.TabIndex = 8;
       // 
       // txtOutput
@@ -98,13 +100,13 @@ partial class frmMain
       this.txtOutput.Multiline = true;
       this.txtOutput.Name = "txtOutput";
       this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.txtOutput.Size = new System.Drawing.Size(558, 165);
+      this.txtOutput.Size = new System.Drawing.Size(558, 151);
       this.txtOutput.TabIndex = 10;
       // 
       // btnGenClass
       // 
       this.btnGenClass.Enabled = false;
-      this.btnGenClass.Location = new System.Drawing.Point(238, 12);
+      this.btnGenClass.Location = new System.Drawing.Point(125, 41);
       this.btnGenClass.Name = "btnGenClass";
       this.btnGenClass.Size = new System.Drawing.Size(107, 23);
       this.btnGenClass.TabIndex = 5;
@@ -112,11 +114,35 @@ partial class frmMain
       this.btnGenClass.UseVisualStyleBackColor = true;
       this.btnGenClass.Click += new System.EventHandler(this.btnGenClass_Click);
       // 
+      // cboClasses
+      // 
+      this.cboClasses.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.cboClasses.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.cboClasses.FormattingEnabled = true;
+      this.cboClasses.Location = new System.Drawing.Point(238, 43);
+      this.cboClasses.Name = "cboClasses";
+      this.cboClasses.Size = new System.Drawing.Size(332, 21);
+      this.cboClasses.TabIndex = 6;
+      // 
+      // cboTables
+      // 
+      this.cboTables.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+      this.cboTables.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+      this.cboTables.FormattingEnabled = true;
+      this.cboTables.Location = new System.Drawing.Point(238, 14);
+      this.cboTables.Name = "cboTables";
+      this.cboTables.Size = new System.Drawing.Size(332, 21);
+      this.cboTables.TabIndex = 7;
+      // 
       // frmMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.ClientSize = new System.Drawing.Size(582, 390);
+      this.Controls.Add(this.cboTables);
+      this.Controls.Add(this.cboClasses);
       this.Controls.Add(this.btnGenClass);
       this.Controls.Add(this.splitMain);
       this.Controls.Add(this.btnGenSQL);
@@ -141,6 +167,8 @@ partial class frmMain
     private System.Windows.Forms.ListBox lstFields;
     private System.Windows.Forms.TextBox txtOutput;
     private System.Windows.Forms.Button btnGenClass;
+    private System.Windows.Forms.ComboBox cboClasses;
+    private System.Windows.Forms.ComboBox cboTables;
   }
 }
 

@@ -22,7 +22,19 @@ namespace CC.Common.Data.Util.Demo
 
     private void frmMain_Load(object sender, EventArgs e)
     {
+      LoadClasses();
       _fields = new FieldDefinitions();
+    }
+
+    private void LoadClasses()
+    {
+      cboClasses.Items.AddRange(DialectLoader.ClassDialects().ToArray());
+      if (cboClasses.Items.Count > 0)
+        cboClasses.SelectedIndex = 0;
+
+      cboTables.Items.AddRange(DialectLoader.TableDialects().ToArray());
+      if (cboTables.Items.Count > 0)
+        cboTables.SelectedIndex = 0;
     }
 
     private DataType CustomTypeDelegate(FieldDefinition field)
@@ -63,6 +75,11 @@ namespace CC.Common.Data.Util.Demo
       ClassBuilder builder = new ClassBuilder("MyTable", _fields, new PythonDialect());
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
+    }
+
+    private void cboClasses_SelectedIndexChanged(object sender, EventArgs e)
+    {
+
     }
   }
 }
