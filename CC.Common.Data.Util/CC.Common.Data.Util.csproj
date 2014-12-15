@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="DataType.cs" />
     <Compile Include="FieldDefinition.cs" />
+    <Compile Include="FieldDefinitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
