@@ -46,6 +46,7 @@
     <Compile Include="DialectLoader.cs" />
     <Compile Include="Dialect\ClassDialectInterface.cs" />
     <Compile Include="Dialect\CSharpDialect.cs" />
+    <Compile Include="Dialect\PythonDialect.cs" />
     <Compile Include="Dialect\SQLServerDialect.cs" />
     <Compile Include="Dialect\TableDialectInterface.cs" />
     <Compile Include="Dialect\TableGeneric.cs" />

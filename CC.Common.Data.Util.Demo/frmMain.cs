@@ -60,7 +60,7 @@ namespace CC.Common.Data.Util.Demo
 
     private void btnGenClass_Click(object sender, EventArgs e)
     {
-      ClassBuilder builder = new ClassBuilder("MyTable", _fields, new CSharpDialect());
+      ClassBuilder builder = new ClassBuilder("MyTable", _fields, new PythonDialect());
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
     }
