@@ -17,7 +17,7 @@ Table: MyTable
 Creating a SQL Server create statement
 ```
 create table MyTable (
-  [MyID] int not null primaty key,
+  [MyID] int not null primary key,
   [MyKey] varchar(40) null,
   [MyValue] varchar(100) null
 )
