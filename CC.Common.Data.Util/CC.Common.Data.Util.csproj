@@ -43,6 +43,7 @@
     <Compile Include="ClassBuilder.cs" />
     <Compile Include="CustomTypeDelegate.cs" />
     <Compile Include="DataType.cs" />
+    <Compile Include="DialectLoader.cs" />
     <Compile Include="Dialect\ClassDialectInterface.cs" />
     <Compile Include="Dialect\CSharpDialect.cs" />
     <Compile Include="Dialect\SQLServerDialect.cs" />
