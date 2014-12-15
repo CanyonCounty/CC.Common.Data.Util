@@ -32,7 +32,7 @@ namespace CC.Common.Data.Util
       string root = _dialect.Indent() + _dialect.FieldDef(field, _custom);
       // Should this go to dialect?
       root += field.Null ? " null" : " not null";
-      if (field.PrimaryKey) root += " primaty key";
+      if (field.PrimaryKey) root += " primary key";
       return root;
     }
 
