@@ -6,11 +6,13 @@ Creates Classes and Tables based on a simple definition
 Taking a field definition like so
 
 Table: MyTable
+
 FieldName|Type|Size|not null|primary
 ---------|----|----|--------|-------
-My ID|int|4|X|X
-My Key|text|40||
-My Value|text|100||
+My ID|int|4|t|t
+My Key|text|40|f|f
+My Value|text|100|f|f
+
 
 Creating a SQL Server create statement
 ```
