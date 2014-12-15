@@ -79,8 +79,8 @@ partial class frmMain
       // splitMain.Panel2
       // 
       this.splitMain.Panel2.Controls.Add(this.txtOutput);
-      this.splitMain.Size = new System.Drawing.Size(558, 308);
-      this.splitMain.SplitterDistance = 153;
+      this.splitMain.Size = new System.Drawing.Size(632, 235);
+      this.splitMain.SplitterDistance = 117;
       this.splitMain.TabIndex = 4;
       // 
       // lstFields
@@ -89,7 +89,7 @@ partial class frmMain
       this.lstFields.FormattingEnabled = true;
       this.lstFields.Location = new System.Drawing.Point(0, 0);
       this.lstFields.Name = "lstFields";
-      this.lstFields.Size = new System.Drawing.Size(558, 153);
+      this.lstFields.Size = new System.Drawing.Size(632, 117);
       this.lstFields.TabIndex = 8;
       // 
       // txtOutput
@@ -100,7 +100,7 @@ partial class frmMain
       this.txtOutput.Multiline = true;
       this.txtOutput.Name = "txtOutput";
       this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.txtOutput.Size = new System.Drawing.Size(558, 151);
+      this.txtOutput.Size = new System.Drawing.Size(632, 114);
       this.txtOutput.TabIndex = 10;
       // 
       // btnGenClass
@@ -122,7 +122,7 @@ partial class frmMain
       this.cboClasses.FormattingEnabled = true;
       this.cboClasses.Location = new System.Drawing.Point(238, 43);
       this.cboClasses.Name = "cboClasses";
-      this.cboClasses.Size = new System.Drawing.Size(332, 21);
+      this.cboClasses.Size = new System.Drawing.Size(406, 21);
       this.cboClasses.TabIndex = 6;
       // 
       // cboTables
@@ -133,14 +133,14 @@ partial class frmMain
       this.cboTables.FormattingEnabled = true;
       this.cboTables.Location = new System.Drawing.Point(238, 14);
       this.cboTables.Name = "cboTables";
-      this.cboTables.Size = new System.Drawing.Size(332, 21);
+      this.cboTables.Size = new System.Drawing.Size(406, 21);
       this.cboTables.TabIndex = 7;
       // 
       // frmMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(582, 390);
+      this.ClientSize = new System.Drawing.Size(656, 317);
       this.Controls.Add(this.cboTables);
       this.Controls.Add(this.cboClasses);
       this.Controls.Add(this.btnGenClass);
