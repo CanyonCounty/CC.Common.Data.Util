@@ -70,6 +70,14 @@ namespace CC.Common.Data.Util
       set { _null = value; }
     }
 
+    public bool IsTextType
+    {
+      get
+      {
+        return (_type == DataType.Text || _type == DataType.Custom);
+      }
+    }
+
     public override string ToString()
     {
       return String.Format("{0} {1}{2}, {3} {4}",
