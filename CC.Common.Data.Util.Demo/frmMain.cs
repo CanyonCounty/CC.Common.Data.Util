@@ -65,21 +65,22 @@ namespace CC.Common.Data.Util.Demo
 
     private void btnGenSQL_Click(object sender, EventArgs e)
     {
-      TableBuilder builder = new TableBuilder("MyTable", _fields, new SQLServerDialect());
+      string tableName = cboTables.SelectedItem.ToString();
+      TableDialectInterface tableDialect = DialectLoader.GetTableDialect(tableName);
+
+      TableBuilder builder = new TableBuilder("MyTable", _fields, tableDialect);
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
     }
 
     private void btnGenClass_Click(object sender, EventArgs e)
     {
-      ClassBuilder builder = new ClassBuilder("MyTable", _fields, new PythonDialect());
+      string className = cboClasses.SelectedItem.ToString();
+      ClassDialectInterface classDialect = DialectLoader.GetClassDialect(className);
+
+      ClassBuilder builder = new ClassBuilder("MyTable", _fields, classDialect);
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
-    }
-
-    private void cboClasses_SelectedIndexChanged(object sender, EventArgs e)
-    {
-
     }
   }
 }
