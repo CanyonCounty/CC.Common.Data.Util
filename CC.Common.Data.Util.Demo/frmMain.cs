@@ -41,6 +41,7 @@ namespace CC.Common.Data.Util.Demo
       _fields.Add(new FieldDefinition("SIGNATURE OF VOTER", DataType.Text, 150, true));
       //Not Been Issued either DL # or SSN Flag
       _fields.Add(new FieldDefinition("Not Been Issued either DL # or SSN Flag", DataType.Text, 150, true));
+      btnGenClass.Enabled = true;
       btnGenSQL.Enabled = true;
 
       lstFields.Items.Clear();
@@ -53,6 +54,13 @@ namespace CC.Common.Data.Util.Demo
     private void btnGenSQL_Click(object sender, EventArgs e)
     {
       TableBuilder builder = new TableBuilder("MyTable", _fields, new SQLServerDialect());
+      builder.SetCustomTypeDelegate(CustomTypeDelegate);
+      txtOutput.Text = builder.ToString();
+    }
+
+    private void btnGenClass_Click(object sender, EventArgs e)
+    {
+      ClassBuilder builder = new ClassBuilder("MyTable", _fields, new CSharpDialect());
       builder.SetCustomTypeDelegate(CustomTypeDelegate);
       txtOutput.Text = builder.ToString();
     }

@@ -33,6 +33,7 @@ partial class frmMain
       this.splitMain = new System.Windows.Forms.SplitContainer();
       this.lstFields = new System.Windows.Forms.ListBox();
       this.txtOutput = new System.Windows.Forms.TextBox();
+      this.btnGenClass = new System.Windows.Forms.Button();
       ((System.ComponentModel.ISupportInitialize)(this.splitMain)).BeginInit();
       this.splitMain.Panel1.SuspendLayout();
       this.splitMain.Panel2.SuspendLayout();
@@ -76,8 +77,8 @@ partial class frmMain
       // splitMain.Panel2
       // 
       this.splitMain.Panel2.Controls.Add(this.txtOutput);
-      this.splitMain.Size = new System.Drawing.Size(632, 264);
-      this.splitMain.SplitterDistance = 132;
+      this.splitMain.Size = new System.Drawing.Size(558, 337);
+      this.splitMain.SplitterDistance = 168;
       this.splitMain.TabIndex = 4;
       // 
       // lstFields
@@ -86,7 +87,7 @@ partial class frmMain
       this.lstFields.FormattingEnabled = true;
       this.lstFields.Location = new System.Drawing.Point(0, 0);
       this.lstFields.Name = "lstFields";
-      this.lstFields.Size = new System.Drawing.Size(632, 132);
+      this.lstFields.Size = new System.Drawing.Size(558, 168);
       this.lstFields.TabIndex = 8;
       // 
       // txtOutput
@@ -97,14 +98,26 @@ partial class frmMain
       this.txtOutput.Multiline = true;
       this.txtOutput.Name = "txtOutput";
       this.txtOutput.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-      this.txtOutput.Size = new System.Drawing.Size(632, 128);
+      this.txtOutput.Size = new System.Drawing.Size(558, 165);
       this.txtOutput.TabIndex = 10;
+      // 
+      // btnGenClass
+      // 
+      this.btnGenClass.Enabled = false;
+      this.btnGenClass.Location = new System.Drawing.Point(238, 12);
+      this.btnGenClass.Name = "btnGenClass";
+      this.btnGenClass.Size = new System.Drawing.Size(107, 23);
+      this.btnGenClass.TabIndex = 5;
+      this.btnGenClass.Text = "Generate Class";
+      this.btnGenClass.UseVisualStyleBackColor = true;
+      this.btnGenClass.Click += new System.EventHandler(this.btnGenClass_Click);
       // 
       // frmMain
       // 
       this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-      this.ClientSize = new System.Drawing.Size(656, 317);
+      this.ClientSize = new System.Drawing.Size(582, 390);
+      this.Controls.Add(this.btnGenClass);
       this.Controls.Add(this.splitMain);
       this.Controls.Add(this.btnGenSQL);
       this.Controls.Add(this.btnDefine);
@@ -127,6 +140,7 @@ partial class frmMain
     private System.Windows.Forms.SplitContainer splitMain;
     private System.Windows.Forms.ListBox lstFields;
     private System.Windows.Forms.TextBox txtOutput;
+    private System.Windows.Forms.Button btnGenClass;
   }
 }
 
