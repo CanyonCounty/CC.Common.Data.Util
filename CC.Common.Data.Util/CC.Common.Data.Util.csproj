@@ -44,7 +44,9 @@
     <Compile Include="CustomTypeDelegate.cs" />
     <Compile Include="DataType.cs" />
     <Compile Include="Dialect\ClassDialectInterface.cs" />
+    <Compile Include="Dialect\SQLServerDialect.cs" />
     <Compile Include="Dialect\TableDialectInterface.cs" />
+    <Compile Include="Dialect\TableGeneric.cs" />
     <Compile Include="FieldDefinition.cs" />
     <Compile Include="FieldDefinitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
