@@ -32,6 +32,19 @@ namespace CC.Common.Data.Util
       _primary = false;
       _null = true;
     }
+    
+    public FieldDefinition(string fieldName, DataType dataType, int fieldSize, bool primary)
+      : this(fieldName, dataType, fieldSize)
+    {
+      _primary = primary;
+    }
+
+    public FieldDefinition(string fieldName, DataType dataType, int fieldSize, bool primary, bool Null)
+      : this(fieldName, dataType, fieldSize)
+    {
+      _primary = primary;
+      _null = Null;
+    }
 
     public string Name
     {
