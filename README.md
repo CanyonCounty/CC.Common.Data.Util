@@ -9,9 +9,9 @@ Table: MyTable
 
 |Field Name|Type|Size|not null|primary|
 |---------|----|----|--------|-------|
-|My ID|int|4|t|t|
-|My Key|text|40|f|f|
-|My Value|text|100|f|f|
+|My ID|int|4|x|x|
+|My Key|text|40|||
+|My Value|text|100|||
 
 
 Creating a SQL Server create statement
