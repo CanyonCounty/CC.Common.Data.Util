@@ -6,19 +6,33 @@ using CC.Common.Data.Util.Dialect;
 
 namespace CC.Common.Data.Util
 {
-// Similar to TableBuilder, but it will create a class and not SQL
+  /// <summary>
+  /// Takes FieldDefinitions and converts it into a class
+  /// </summary>
   public class ClassBuilder
   {
-    // Takes the FieldDefinitions and uses a Dialect to generate the SQL statement
     private ClassDialectInterface _dialect;
     private FieldDefinitions _fields;
     private string _className;
     private CustomTypeDelegate _custom;
     private Dictionary<string, string> _names;
 
-    // I think I'll just call the Generate method and let the Dialects handle everything
-    public ClassBuilder(string className, FieldDefinitions fields, ClassDialectInterface dialect) : this(className, fields, dialect, null) { }
+    /// <summary>
+    /// Class Builder
+    /// </summary>
+    /// <param name="className">The class name</param>
+    /// <param name="fields">List of FieldDefinition</param>
+    /// <param name="dialect">The dialect to create</param>
+    public ClassBuilder(string className, FieldDefinitions fields, ClassDialectInterface dialect)
+      : this(className, fields, dialect, null) { }
 
+    /// <summary>
+    /// Class Builder with optional dictionary of new names
+    /// </summary>
+    /// <param name="className">The class name</param>
+    /// <param name="fields">List of FieldDefinition</param>
+    /// <param name="dialect">The dialect to create</param>
+    /// <param name="names">A dictionary to rename fields too (python dialect uses it)</param>
     public ClassBuilder(string className, FieldDefinitions fields, ClassDialectInterface dialect, Dictionary<string, string> names)
     {
       _fields = fields;
@@ -28,12 +42,16 @@ namespace CC.Common.Data.Util
       _custom = null;
     }
 
+    /// <summary>
+    /// Set the custom type delegate. This can be used to determine the type at runtime
+    /// </summary>
+    /// <param name="custom"></param>
     public void SetCustomTypeDelegate(CustomTypeDelegate custom)
     {
       _custom = custom;
     }
 
-    public string Generate(Dictionary<string, string> map)
+    private string Generate(Dictionary<string, string> map)
     {
       for (int i = 0; i < _fields.Count; i++)
       {
@@ -66,6 +84,10 @@ namespace CC.Common.Data.Util
       return ret;
     }
 
+    /// <summary>
+    /// String representation of the class
+    /// </summary>
+    /// <returns>The code for the class</returns>
     public override string ToString()
     {
       // Doesn't seem to matter String vs StringBuilder
