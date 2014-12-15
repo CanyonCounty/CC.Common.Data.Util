@@ -79,18 +79,31 @@ namespace CC.Common.Data.Util
       _classDialects.Sort();
     }
 
+    /// <summary>
+    /// All found table dialects
+    /// </summary>
+    /// <returns>A List of TableDialects</returns>
     public static List<string> TableDialects()
     {
       LoadDialects();
       return _tableDialects;
     }
 
+    /// <summary>
+    /// All found class dialects
+    /// </summary>
+    /// <returns>A List of ClassDialects</returns>
     public static List<string> ClassDialects()
     {
       LoadDialects();
       return _classDialects;
     }
 
+    /// <summary>
+    /// Takes a sting representation of a ClassDialect and returns that class
+    /// </summary>
+    /// <param name="classDialectName">The class dialect to find</param>
+    /// <returns>An instance of classDialectName</returns>
     public static ClassDialectInterface GetClassDialect(string classDialectName)
     {
       ClassDialectInterface ret = (ClassDialectInterface)_localAssembly.CreateInstance(classDialectName);
@@ -101,6 +114,11 @@ namespace CC.Common.Data.Util
       return ret;
     }
 
+    /// <summary>
+    /// Takes a string representation of a TableDialect and returns that class
+    /// </summary>
+    /// <param name="tableDialectName">The table dilect to find</param>
+    /// <returns>An instance of tableDilectName</returns>
     public static TableDialectInterface GetTableDialect(string tableDialectName)
     {
       TableDialectInterface ret = (TableDialectInterface)_localAssembly.CreateInstance(tableDialectName);

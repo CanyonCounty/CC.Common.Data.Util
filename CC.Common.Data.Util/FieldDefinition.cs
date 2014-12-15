@@ -6,7 +6,6 @@ using System.Text;
 
 namespace CC.Common.Data.Util
 {
-
   public class FieldDefinition
   {
     private string _name;
