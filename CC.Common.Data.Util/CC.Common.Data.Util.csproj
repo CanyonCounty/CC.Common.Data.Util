@@ -51,6 +51,7 @@
     <Compile Include="Dialect\TableDialectInterface.cs" />
     <Compile Include="Dialect\TableGeneric.cs" />
     <Compile Include="Dialect\TextDialect.cs" />
+    <Compile Include="Dialect\TextEqualsDialect.cs" />
     <Compile Include="FieldDefinition.cs" />
     <Compile Include="FieldDefinitions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
