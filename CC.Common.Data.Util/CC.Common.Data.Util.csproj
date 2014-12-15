@@ -40,8 +40,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ClassBuilder.cs" />
     <Compile Include="CustomTypeDelegate.cs" />
     <Compile Include="DataType.cs" />
+    <Compile Include="Dialect\ClassDialectInterface.cs" />
     <Compile Include="Dialect\TableDialectInterface.cs" />
     <Compile Include="FieldDefinition.cs" />
     <Compile Include="FieldDefinitions.cs" />
